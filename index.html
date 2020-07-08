@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Documentation Page</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<nav id= "navbar">
+  <header>
+    <h1 id="page topic" tabindex="0">Kali Linux Documentation</h1>
+  </header>
+ 
+  <div
+  <ul id="nav-menu">
+  
+      <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+    <li><a class="nav-link" href="#Undercover">Undercover</a></li>
+  <li><a class="nav-link" href="#Arm">Arm</a></li>
+    <li><a class="nav-link" href="#Branches">Branches</a></li>
+    <li><a class="nav-link" href="#Installation">Installation</a></li>
+    <li><a class="nav-link" href="#Reference">Reference</a></li>
+ </ul>
+</nav>
+
+<main id="main-doc">
+  
+  <!--This is the Introduction Section!-->
+  
+<section class="main-section" id="Introduction">
+    <header>
+      <h1>Introduction</h1>
+    </header>
+     
+  <p> Kali Linux is a Debian-based Linux distribution aimed at advanced Penetration Testing and Security Auditing. Kali contains several hundred tools which are geared towards various information security tasks, such as Penetration Testing, Security research, Computer Forensics and Reverse Engineering. Kali Linux is developed, funded and maintained by Offensive Security, a leading information security training company.<br><br>
+
+Kali Linux was released on the 13th March, 2013 as a complete, top-to-bottom rebuild of BackTrack Linux, adhering completely to Debian development standards.<br><br>
+         <ul>
+         <li>
+         <b>More than 600 penetration testing tools included:</b> After reviewing every tool that was included in BackTrack, we eliminated a great number of tools that either simply did not work or which duplicated other tools that provided the same or similar functionality.
+                           </ul>
+                           </li>
+                           <br>
+         <ul>
+         <li>
+           <b>Free (as in beer) and always will be:</b> Kali Linux, like BackTrack, is completely free of charge and always will be. You will never, ever have to pay for Kali Linux.
+           
+                           </ul>
+                           </li>
+                           <br>
+   
+     <ul>
+     <li>
+       <b>Open source Git tree:</b> We are committed to the open source development model and our development tree is available for all to see. All of the source code which goes into Kali Linux is available for anyone who wants to tweak or rebuild packages to suit their specific needs.
+         
+                           </ul>
+                           </li>
+                           <br>
+   
+   <ul>
+   <li>
+        
+   <b>FHS compliant:</b> Kali adheres to the Filesystem Hierarchy Standard, allowing Linux users to easily locate binaries, support files, libraries, etc.
+                            </ul>
+                            </li>
+                            <br>
+  
+   
+  <ul>
+  <li>                         
+     <b>Wide-ranging wireless device support:</b> A regular sticking point with Linux distributions has been supported for wireless interfaces. We have built Kali Linux to support as many wireless devices as we possibly can, allowing it to run properly on a wide variety of hardware and making it compatible with numerous USB and other wireless devices.
+           
+                         </ul>
+                         </li>
+                         <br>
+  
+  <ul>
+  <li>
+    <b>Custom kernel, patched for injection:</b> As penetration testers, the development team often needs to do wireless assessments, so our kernel has the latest injection patches included.<p>     
+                         </ul>
+                         </li>
+                         
+ </section>
+
+<!--This is the Undercover section!-->
+
+<section class="main-section" id="Undercover">
+  
+ <header><h1>UNDERCOVER</h1></header>
+      
+  <P>Kali Undercover is a set of scripts that changes the look and feel of your Kali Linux desktop environment to Windows 10 desktop environment, like magic.<br><br>
+
+    It was released with Kali<b> Linux 2019.4</b> with an important concept in mind, to hide in plain sight.<br></p>
+    <h2><b>Getting “Undercover”</h2></b>
+    
+<p>Switching to undercover mode is pretty straight-forward, just run the following command inside command-line:<br>
+  
+ <code class="highlight-blue">kali@kali:~$ kali-undercover </code><br><br>
+        or, you can also look for <b><important>“Kali Undercover Mode”</important></b> from menu of your desktop and launch it.
+
+  <b>Swoosh!</b> Now, you are completely(almost) invisible. The script will turn your desktop environment’s look and feel similar to that of Windows 10.<br>
+     <h2>Reverting Back</h2>
+        <p>Now, to revert back into your previous desktop settings just re-enter the previous command:<br><br><code class="highlight-blue">kali@kali:~$ kali-undercover<br><br>
+          <b>Ta-da!</b><important>Welcome back!</important> Now, all your desktop settings should be restored to.
+        <!--Here you have an example of Reverting!-->
+          <h2>Example:</h2>
+    <pre>
+      <code>
+root@kali:-# leafpad /etc/gdm3/daemon.conf
+[daemon]
+#Enabling automatic login
+AutomaticLoginEnable = True
+AutomaticLogic = root
+ 
+ </code>
+ </pre>
+          
+<h2>Purpose of Undercover Mode in Kali Linux</h2><br>
+        
+        Let’s imagine a scenario: you are pentesting your client (ethically) and you are in their office or reception doing reconnaissance or something that involves the use of<b>Kali Linux.</b><br>
+
+What if someone from your client’s office or some random on-looker spot your desktop environment/wallpaper of Kali Linux and he/she might think you are doing something mischievous even though you are doing it ethically and warn the authority. All the hard work that you did from the beginning to become stealthy will go in vain. That also because of what?<b>A wallpaper!<br>
+        For a client who requested you to become stealthy, this is not what you would want.</b><br>
+
+Hence, to prevent any kind of unwanted attention from public its better to go <b>“Undercover!”.</b></p>
+</section>
+
+<!--This is the ARM section!-->
+
+<section class="main-section" id="Arm">
+  <header>
+  <h1>Arm</h1><br>
+  </header>
+  
+  <p>When BackTrack ARM first came out, it was one image, for a Motorola Xoom. The work was done on the Xoom itself by muts. He started from an Ubuntu image for it, built all of the packages for Backtrack on it, then installed them. <br><br>
+
+When Kali came about, we retooled everything, including build servers for <b> armel, armhf, and arm64.</b> No more building packages manually on the <b>ARM devices </b>themselves. So everything was in place, but the images for <b>ARM devices</b> were still being built manually. Putting out an updated image meant downloading the last release, writing it to an sdcard, booting the device, running updates, building the kernel, installing the new kernel, cleaning up the logs and apt cache, then powering the system off, plugging the sdcard back into my other system, and creating a dd image of the sdcard, putting it on to a server. 
+
+We wanted to make it so anyone could, starting from a Kali amd64 installation, build an image that would work on any of our supported ARM devices, end up with exactly what we put out, and most importantly, customize it for their needs. So I created the kali-arm-build-scripts - they aren’t fancy, but they’re easy to read, follow and modify.</p>
+</section>
+   
+<!--This is the Branches section!-->
+<section class="main-section" id="Branches">
+  <header>
+  <h2>Branches</h2><br>
+  </header>
+       
+ <p> A branch is an alternative version of some software, in this case of the Kali OS. Kali Linux has multiple branches which allows for users to decide how up to date their packages will be. Kali Linux is similar to Debian in many regards, one of which is the use of branches.<br><br>
+
+You may have multiple branches enabled at once. However, switching branches may introduce problems, as packages may be at different versions, and unavailiable or unstable in certain cases.<br><br>
+
+   Please see the network sources page for how to switch branches. <b>For an example</b> of how to use multiple branches, please see our <b> NVIDIA GPU Drivers guide.</b></p>
+</section>
+    
+<!--This is the Installation section!-->
+<section class="main-section" id="Installation">
+  
+  <header>
+  <h2>Installation</h2><br>
+  </header>
+    
+  <p>The installation requirements for Kali Linux vary depending on what you would like to install. On the low end, you can set up Kali as a <b>basic Secure Shell (SSH)</b> server with no desktop, using as little as <b>128 MB</b> of RAM <important>(512 MB recommended)</important> and <b>2 GB </b>of disk space. On the higher end, if you opt to install the default <b>XFCE4</b> desktop and the kali-linux-default meta-package, you should really aim for at least <b>2048 MB</b> of RAM and <b>20 GB</b> of disk space.<p>
+</section>
+
+<!--This is the Reference section!-->
+<section class="main-section" id="Reference">
+    <header>
+      <h1>Reference</h1>
+    </header>
+    <p>All the information on this project page has been taken from the <a href="https://www.kali.org/docs/introduction/installation-requirements/" target="_blank" alt="">Kali Offensive Security</a></p>
+  </section>
+
+
+ </main>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
